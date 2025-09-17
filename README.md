@@ -1,4 +1,4 @@
-# Документация Huawei HiLink API
+# Документация Huawei HiLink API E3372
 
 [English version](README-EN.md) 
 
