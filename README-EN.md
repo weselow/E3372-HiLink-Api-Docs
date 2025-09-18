@@ -2,6 +2,8 @@
 
 [Русская версия](README.md)
 
+![Huawei E3372](img/e3372.png)
+
 ## Overview
 
 Comprehensive documentation for the Huawei HiLink API, providing complete reference for controlling HiLink modems through HTTP requests.

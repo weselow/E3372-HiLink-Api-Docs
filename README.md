@@ -2,6 +2,8 @@
 
 [English version](README-EN.md) 
 
+![Huawei E3372](img/e3372.png)
+
 ## Обзор
 
 Полная документация по API Huawei HiLink, предоставляющая исчерпывающий справочник по управлению модемами HiLink через HTTP-запросы.
