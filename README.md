@@ -15,13 +15,48 @@ HiLink устройства обычно нельзя программирова
 - [Аутентификация](authentication-RU.md) - Управление сессиями и безопасность
 
 ### Модули API
-- [Device API](modules/device-RU.md) - Информация об устройстве и управление
-- [SMS API](modules/sms-RU.md) - Управление SMS
-- [Monitoring API](modules/monitoring-RU.md) - Мониторинг статуса и трафика
-- [Network API](modules/network-RU.md) - Конфигурация Net, WLAN, DHCP
-- [Security API](modules/security-RU.md) - Безопасность, управление PIN
-- [System API](modules/system-RU.md) - Глобальные настройки и язык
-- [Advanced API](modules/advanced-RU.md) - OTA, диагностика, голосовые функции
+
+#### Доступные методы API
+
+- **[Device API](modules/device-RU.md)** - Информация об устройстве и управление
+  - `GET /api/device/information` - Получение информации об устройстве
+  - `POST /api/device/control` - Управление устройством (перезагрузка/выключение)
+  - `GET /api/device/autorun-version` - Проверка версии автозапуска
+
+- **[SMS API](modules/sms-RU.md)** - Управление SMS
+  - `GET /api/sms/sms-count` - Получение количества SMS
+  - `POST /api/sms/sms-list` - Получение списка SMS с фильтрацией
+  - `POST /api/sms/send-sms` - Отправка SMS-сообщений
+
+- **[Monitoring API](modules/monitoring-RU.md)** - Мониторинг статуса и трафика
+  - `GET /api/monitoring/status` - Получение статуса устройства
+  - `GET /api/monitoring/traffic-statistics` - Получение статистики трафика
+
+- **[Network API](modules/network-RU.md)** - Конфигурация сети, WLAN, DHCP
+  - `GET /api/dialup/connection` - Получение статуса соединения
+  - `POST /api/dialup/dial` - Подключение/отключение мобильных данных
+  - `GET /api/wlan/basic-settings` - Получение настроек WiFi
+  - `POST /api/wlan/basic-settings` - Настройка параметров WiFi
+  - `GET /api/wlan/security-settings` - Получение настроек безопасности WiFi
+  - `GET /api/dhcp/settings` - Получение настроек DHCP
+  - `POST /api/dhcp/settings` - Настройка параметров DHCP
+  - `GET /api/ddns/ddns-list` - Получение настроек DDNS
+  - `POST /api/ddns/ddns-list` - Настройка DDNS
+  - `GET /api/cradle/basic-info` - Получение информации Cradle
+  - `POST /api/cradle/basic-info` - Настройка конфигурации Cradle
+
+- **[Security API](modules/security-RU.md)** - Безопасность, управление PIN
+  - `GET /api/user/state-login` - Проверка статуса аутентификации
+  - `POST /api/user/login` - Вход в систему
+  - `POST /api/pin/operate` - Операции с PIN (разблокировка SIM)
+
+- **[System API](modules/system-RU.md)** - Глобальные настройки и конфигурация
+  - `GET /api/global/module-switch` - Получение статуса модулей
+
+- **[Advanced API](modules/advanced-RU.md)** - OTA, диагностика, голосовые функции
+  - `POST /api/diagnosis/ping` - Тестирование сетевого подключения
+  - `POST /api/filemanager/upload` - Загрузка файлов на устройство
+  - `POST /api/ussd/send` - Отправка USSD-кодов
 
 ### Примеры и использование
 - [Общие задачи](examples/common-tasks-RU.md) - Практические примеры использования

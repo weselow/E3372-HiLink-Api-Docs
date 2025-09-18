@@ -1,4 +1,6 @@
-# Huawei E3372 HiLink API Documentation 
+# Huawei E3372 HiLink API Documentation
+
+[Русская версия](README.md)
 
 ## Overview
 
@@ -13,13 +15,48 @@ HiLink devices usually cannot be programmed using AT commands or libraries prepa
 - [Authentication](authentication.md) - Session management and security
 
 ### API Modules
-- [Device API](modules/device.md) - Device information and control
-- [SMS API](modules/sms.md) - SMS management
-- [Monitoring API](modules/monitoring.md) - Status and traffic monitoring
-- [Network API](modules/network.md) - Net, WLAN, DHCP configuration
-- [Security API](modules/security.md) - Security, PIN management
-- [System API](modules/system.md) - Global settings and language
-- [Advanced API](modules/advanced.md) - OTA, Diagnosis, Voice features
+
+#### Available API Methods
+
+- **[Device API](modules/device.md)** - Device information and control
+  - `GET /api/device/information` - Get device information
+  - `POST /api/device/control` - Device control (restart/shutdown)
+  - `GET /api/device/autorun-version` - Check autorun version
+
+- **[SMS API](modules/sms.md)** - SMS management
+  - `GET /api/sms/sms-count` - Get SMS count
+  - `POST /api/sms/sms-list` - Get SMS list with filtering
+  - `POST /api/sms/send-sms` - Send SMS messages
+
+- **[Monitoring API](modules/monitoring.md)** - Status and traffic monitoring
+  - `GET /api/monitoring/status` - Get device status
+  - `GET /api/monitoring/traffic-statistics` - Get traffic statistics
+
+- **[Network API](modules/network.md)** - Network, WLAN, DHCP configuration
+  - `GET /api/dialup/connection` - Get connection status
+  - `POST /api/dialup/dial` - Connect/disconnect mobile data
+  - `GET /api/wlan/basic-settings` - Get WiFi settings
+  - `POST /api/wlan/basic-settings` - Configure WiFi parameters
+  - `GET /api/wlan/security-settings` - Get WiFi security settings
+  - `GET /api/dhcp/settings` - Get DHCP settings
+  - `POST /api/dhcp/settings` - Configure DHCP parameters
+  - `GET /api/ddns/ddns-list` - Get DDNS settings
+  - `POST /api/ddns/ddns-list` - Configure DDNS
+  - `GET /api/cradle/basic-info` - Get Cradle information
+  - `POST /api/cradle/basic-info` - Configure Cradle settings
+
+- **[Security API](modules/security.md)** - Security, PIN management
+  - `GET /api/user/state-login` - Check authentication status
+  - `POST /api/user/login` - User login
+  - `POST /api/pin/operate` - PIN operations (SIM unlock)
+
+- **[System API](modules/system.md)** - Global settings and configuration
+  - `GET /api/global/module-switch` - Get module status
+
+- **[Advanced API](modules/advanced.md)** - OTA, Diagnostics, Voice features
+  - `POST /api/diagnosis/ping` - Network connectivity testing
+  - `POST /api/filemanager/upload` - Upload files to device
+  - `POST /api/ussd/send` - Send USSD codes
 
 ### Examples and Usage
 - [Common Tasks](examples/common-tasks.md) - Practical usage examples
