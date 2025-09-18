@@ -8,6 +8,7 @@
 		"img"
 	],
 	"excludeFiles": [
+		"README.md",
 		"authentication-RU.md",
 		"common-tasks-RU.md",
 		"error-handling-RU.md",
